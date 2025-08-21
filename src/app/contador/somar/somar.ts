@@ -13,6 +13,8 @@ export class Somar {
     this.valor++;
   }
   subtrair = ()=>{
-    this.valor--;
+    if(this.valor > 0 ){
+      this.valor--;
+    }
   }
 }

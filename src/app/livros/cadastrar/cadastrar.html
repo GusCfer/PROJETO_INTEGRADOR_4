@@ -11,7 +11,20 @@
 Olá {{nome}}!
 <img [src]='caminhoImagem'>
 <br>
-<button (click)="dizerOi()">Comprar livro</button>
+<p *ngIf="mostrarMensagem">esta mensagem é exibida condicionalmente.</p>
+<button (click)="toggleMensagem()">Alterar Mensagem</button>
+
+<ul>
+  <li *ngFor="let item of listaItens">{{item}}</li>
+</ul>
+
+<div [ngClass]="{'destaque':isDestaque, 'erro': hasError}">
+  Este elemento tem classes dinamicas!
+</div>
+
+<div [ngStyle]="{'background-color':corFundo,'font-size':tamanho}">
+  Este elemento tem estilos dinamicos!
+</div>
 
 </body>
 </html>

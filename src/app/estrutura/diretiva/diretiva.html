@@ -1,0 +1,20 @@
+
+<div class="centralizado">
+<p>=============== ALUNOS =============</p>
+<div [ngStyle]="{'font-size':fonte}">
+    <div *ngIf="exibirDetalhes">
+        <button (click)="alterarStatus()">Alterar status</button>
+        <button (click)="aumentarFonte()">+</button>
+        <button (click)="diminuirFonte()">-</button>
+        <div>
+            <ul>
+            <li *ngFor="let aluno of alunos" [ngClass]="{'ativo':aluno.status, 'inativo': aluno.status == false}">
+            {{aluno.id}} - {{aluno.nome}} - {{aluno.status}}
+            </li>
+        </ul>
+        </div>
+    </div>
+</div>
+<button (click)="alterarVisualizacao()">ocultar/visualizar</button>
+<p>===================================</p>
+</div>

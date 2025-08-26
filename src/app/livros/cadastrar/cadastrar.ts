@@ -14,4 +14,20 @@ export class Cadastrar {
     this.nome = 'Livro Comprado'
   }
 
+  mostrarMensagem = false;
+
+  toggleMensagem = () => {
+    this.mostrarMensagem = !this.mostrarMensagem;
+    this.isDestaque = !this.isDestaque;
+    this.hasError = !this.hasError;
+  }
+
+  listaItens = ['Gustavo Prado','Vitori Barreto','Rodolfo Scarpin'];
+
+  isDestaque = true;
+  hasError = false;
+
+  corFundo = 'yellow';
+  tamanho = '30px';
+
 }

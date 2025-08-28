@@ -27,7 +27,7 @@ export class Diretiva {
 
   alterarStatus = () => {
     for (let aluno of this.alunos) {
-      aluno.status = aluno.status === true ? false :true;
+      aluno.status = aluno.status === true ? false : true;
     }
   }
    aumentarFonte = () => {

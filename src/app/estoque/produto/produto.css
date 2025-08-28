@@ -1,0 +1,50 @@
+.disponivel{
+    color: green;
+}
+.indisponivel{
+    color: red;
+    font-style: italic;
+}
+
+.maior{
+    color: blue;
+}
+.menor{
+    color: black;
+}
+.centralizado{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
+th,td{
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+}
+.tabelaProdutos {
+  margin: 0 auto; /* centraliza horizontalmente */
+  border-collapse: collapse; /* opcional: remove espaços entre bordas */
+  margin-top: 10px;
+  background-color: rgb(249, 249, 249);
+  box-shadow: 5px 5px 10px gray ;
+}
+button{
+    border: 0px solid;
+    margin: 5px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px gray;
+}
+button:hover{
+    transform: scale(1.1);
+}
+button:active{
+    transform: scale(0.9);
+}
+.aumentar{
+    background-color: rgb(109, 109, 175);
+}
+.diminuir{
+    background-color: rgb(160, 76, 76);
+}

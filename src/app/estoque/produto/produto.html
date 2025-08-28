@@ -1,0 +1,23 @@
+
+<div class="centralizado">
+<p>==================================== PRODUTOS ====================================</p>
+<div class="div2">
+    <button (click)="aumentarValor()" class="aumentar">+ 10%</button>
+    <button (click)="diminuirValor()" class="diminuir"> - 10%</button>
+
+    <table class="tabelaProdutos">
+        <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Estoque</th>
+            <th>Status</th>
+        </tr>
+        <tr *ngFor="let produto of produtos" [ngClass]="{'disponivel':produto.estoque > 0 , 'indisponivel': produto.estoque <= 0}">
+            <td>{{produto.nome}}</td>
+            <td [ngClass]="{'maior':produto.preco > 2000 , 'menor': produto.preco <= 2000}">{{produto.preco | currency:'BRL'}}</td>
+            <td>{{produto.estoque}}</td>
+            <td><div *ngIf="produto.estoque > 0">Disponivel</div> <div *ngIf="produto.estoque <= 0">Indisponivel</div></td>
+    </table>
+</div>
+<p>=====================================================================================</p>
+</div>
